@@ -7,11 +7,10 @@ import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.sqt.sequelassignment.R
-import com.sqt.sequelassignment.ui.activity.HistoryActivity
 import com.sqt.sequelassignment.databinding.ItemDashboardBinding
 import com.sqt.sequelassignment.model.SearchResultItem
+import com.sqt.sequelassignment.ui.activity.HistoryActivity
 import com.squareup.picasso.Picasso
-
 
 class HistoryAdapter(private val mList: ArrayList<SearchResultItem>, val mcontext: Context) :
     RecyclerView.Adapter<HistoryAdapter.ViewHolder>() {
@@ -24,14 +23,11 @@ class HistoryAdapter(private val mList: ArrayList<SearchResultItem>, val mcontex
             R.layout.item_dashboard, parent, false
         )
 
-
-
         return ViewHolder(itemDashboardBinding.root)
     }
 
     // binds the list items to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-
 
         itemDashboardBinding.response = mList[position]
 
@@ -50,7 +46,5 @@ class HistoryAdapter(private val mList: ArrayList<SearchResultItem>, val mcontex
     }
 
     // Holds the views for adding it to  text
-    class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-
-    }
+    class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView)
 }

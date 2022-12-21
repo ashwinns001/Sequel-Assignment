@@ -2,31 +2,17 @@ package com.sqt.sequelassignment.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.sqt.sequelassignment.retrofit.RetrofitClient
 import com.sqt.sequelassignment.model.ApiResponse
 import com.sqt.sequelassignment.model.MovieDetailResponse
-import com.sqt.sequelassignment.repository.MovieDetailRepository
 import com.sqt.sequelassignment.retrofit.ApiService
+import com.sqt.sequelassignment.retrofit.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class MovieDetailViewModel : ViewModel() {
-    private var mApiResponse: MutableLiveData<ApiResponse> = MutableLiveData()
-    private val mApiRepo: MovieDetailRepository = MovieDetailRepository()
+
     var retrofitClient: RetrofitClient = RetrofitClient()
-
-
-    fun getMovies(title: String): MutableLiveData<ApiResponse> {
-
-
-        mApiResponse = mApiRepo.getMoviesDetails(
-            "tt15838900"
-        )
-
-
-        return mApiResponse
-    }
 
     fun getMoviesDetails(imdbId: String): MutableLiveData<ApiResponse> {
         val apiResponse = MutableLiveData<ApiResponse>()
@@ -46,7 +32,6 @@ class MovieDetailViewModel : ViewModel() {
 //
                 }
             }
-
         })
 
         return apiResponse
@@ -54,6 +39,4 @@ class MovieDetailViewModel : ViewModel() {
     fun String.capitalizeFirstCharacter(): String {
         return substring(0, 1).toUpperCase() + substring(1)
     }
-
-
 }

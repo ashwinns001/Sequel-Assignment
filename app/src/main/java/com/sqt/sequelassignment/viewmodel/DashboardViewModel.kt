@@ -2,21 +2,16 @@ package com.sqt.sequelassignment.viewmodel
 
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
-import com.sqt.sequelassignment.retrofit.RetrofitClient
-import com.sqt.sequelassignment.model.ApiResponse
-import com.sqt.sequelassignment.model.MovieDetailResponse
 import com.sqt.sequelassignment.model.SearchApiResponse
 import com.sqt.sequelassignment.model.SearchResultResponse
-import com.sqt.sequelassignment.repository.MovieDetailRepository
 import com.sqt.sequelassignment.retrofit.ApiService
+import com.sqt.sequelassignment.retrofit.RetrofitClient
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
 
 class DashboardViewModel : ViewModel() {
     var retrofitClient: RetrofitClient = RetrofitClient()
-
-
 
     fun getSearchDetails(query: String): MutableLiveData<SearchApiResponse> {
         val apiResponse = MutableLiveData<SearchApiResponse>()
@@ -36,11 +31,8 @@ class DashboardViewModel : ViewModel() {
 //
                 }
             }
-
         })
 
         return apiResponse
     }
-
-
 }

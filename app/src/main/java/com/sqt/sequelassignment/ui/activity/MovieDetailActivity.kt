@@ -19,7 +19,6 @@ import com.sqt.sequelassignment.retrofit.CheckConnection
 import com.sqt.sequelassignment.viewmodel.MovieDetailViewModel
 import com.squareup.picasso.Picasso
 
-
 class MovieDetailActivity : AppCompatActivity() {
     private lateinit var activityMovieDetailBinding: ActivityMovieDetailBinding
     private val checkConnection by lazy { CheckConnection(application) }
@@ -41,13 +40,14 @@ class MovieDetailActivity : AppCompatActivity() {
         val extras = intent.extras
         if (extras != null) {
             val value = extras.getString("imdbID")
-            //The key argument here must match that used in the other activity
+            // The key argument here must match that used in the other activity
             value?.let { getMovieDetails(it) }
-
         }
-        activityMovieDetailBinding.imageViewBack.setOnClickListener(View.OnClickListener {
-            onBackPressed()
-        })
+        activityMovieDetailBinding.imageViewBack.setOnClickListener(
+            View.OnClickListener {
+                onBackPressed()
+            }
+        )
     }
 
     private fun getMovieDetails(query: String) {
@@ -64,7 +64,7 @@ class MovieDetailActivity : AppCompatActivity() {
                 return@observe
             }
             if (apiResponse.error == null) {
-                activityMovieDetailBinding.constraintLayout.visibility=View.VISIBLE
+                activityMovieDetailBinding.constraintLayout.visibility = View.VISIBLE
 
                 val result: MovieDetailResponse = apiResponse.posts!!
                 activityMovieDetailBinding.response = apiResponse.posts
@@ -74,8 +74,6 @@ class MovieDetailActivity : AppCompatActivity() {
                 Picasso.get().load(
                     result.Poster
                 ).into(activityMovieDetailBinding.imageViewTop)
-
-
             } else {
                 val throwable: Throwable = apiResponse.error!!
                 Toast.makeText(
@@ -86,5 +84,4 @@ class MovieDetailActivity : AppCompatActivity() {
             }
         }
     }
-
 }

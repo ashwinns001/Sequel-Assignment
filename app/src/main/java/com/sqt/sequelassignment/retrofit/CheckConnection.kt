@@ -11,10 +11,10 @@ class CheckConnection(private val cm: ConnectivityManager) : LiveData<Boolean>()
 
     constructor(application: Application) : this(
         application.getSystemService(Context.CONNECTIVITY_SERVICE)
-                as ConnectivityManager
+            as ConnectivityManager
     )
 
-    private val networkCallback =object : ConnectivityManager.NetworkCallback(){
+    private val networkCallback = object : ConnectivityManager.NetworkCallback() {
         override fun onAvailable(network: Network) {
             super.onAvailable(network)
             postValue(true)
@@ -28,13 +28,12 @@ class CheckConnection(private val cm: ConnectivityManager) : LiveData<Boolean>()
 
     override fun onActive() {
         super.onActive()
-        val request= NetworkRequest.Builder()
-        cm.registerNetworkCallback(request.build(),networkCallback)
+        val request = NetworkRequest.Builder()
+        cm.registerNetworkCallback(request.build(), networkCallback)
     }
 
     override fun onInactive() {
         super.onInactive()
         cm.unregisterNetworkCallback(networkCallback)
     }
-
 }

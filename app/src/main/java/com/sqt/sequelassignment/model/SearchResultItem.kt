@@ -9,5 +9,6 @@ data class SearchResultItem(
     val Year: String,
     @PrimaryKey
     val imdbID: String,
-    val Type: String, val Poster: String,
+    val Type: String,
+    val Poster: String,
 )

@@ -1,6 +1,6 @@
 package com.sqt.sequelassignment.model
 
-class SearchApiResponse{
+class SearchApiResponse {
 
     var posts: SearchResultResponse? = null
     var error: Throwable? = null

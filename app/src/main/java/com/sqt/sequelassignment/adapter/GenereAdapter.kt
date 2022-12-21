@@ -6,9 +6,7 @@ import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.sqt.sequelassignment.R
-import com.sqt.sequelassignment.databinding.ItemDashboardBinding
 import com.sqt.sequelassignment.databinding.ItemGenereBinding
-
 
 class GenereAdapter(private val mList: List<String>) : RecyclerView.Adapter<GenereAdapter.ViewHolder>() {
     private lateinit var itemGenereBinding: ItemGenereBinding
@@ -18,14 +16,12 @@ class GenereAdapter(private val mList: List<String>) : RecyclerView.Adapter<Gene
 
         itemGenereBinding = DataBindingUtil.inflate(LayoutInflater.from(parent.context), R.layout.item_genere, parent, false)
 
-
         return ViewHolder(itemGenereBinding.root)
     }
 
     // binds the list items to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-itemGenereBinding.response=mList[position]
-
+        itemGenereBinding.response = mList[position]
     }
 
     // return the number of the items in the list
@@ -35,6 +31,6 @@ itemGenereBinding.response=mList[position]
 
     // Holds the views for adding it to  text
     class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-       val textView: TextView = itemView.findViewById(R.id.text_genere)
+        val textView: TextView = itemView.findViewById(R.id.text_genere)
     }
 }

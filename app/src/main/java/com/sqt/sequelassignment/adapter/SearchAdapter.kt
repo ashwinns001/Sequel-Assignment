@@ -1,22 +1,18 @@
 package com.sqt.sequelassignment.adapter
 
-import android.app.Activity
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.databinding.DataBindingUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.sqt.sequelassignment.R
-import com.sqt.sequelassignment.ui.activity.MainActivity
 import com.sqt.sequelassignment.databinding.ItemDashboardBinding
 import com.sqt.sequelassignment.model.SearchResultItem
+import com.sqt.sequelassignment.ui.activity.MainActivity
 import com.squareup.picasso.Picasso
 
-
-class SearchAdapter(private val mList: ArrayList<SearchResultItem>,val mcontext:Context) :
+class SearchAdapter(private val mList: ArrayList<SearchResultItem>, val mcontext: Context) :
     RecyclerView.Adapter<SearchAdapter.ViewHolder>() {
     private lateinit var itemDashboardBinding: ItemDashboardBinding
 
@@ -29,15 +25,13 @@ class SearchAdapter(private val mList: ArrayList<SearchResultItem>,val mcontext:
             R.layout.item_dashboard, parent, false
         )
 
-
-
         return ViewHolder(itemDashboardBinding.root)
     }
 
     // binds the list items to a view
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
 
-      itemDashboardBinding.response=mList[position]
+        itemDashboardBinding.response = mList[position]
         Picasso.get().load(
             mList[position].Poster
         ).into(itemDashboardBinding.imagePoster)
@@ -52,7 +46,5 @@ class SearchAdapter(private val mList: ArrayList<SearchResultItem>,val mcontext:
     }
 
     // Holds the views for adding it to  text
-    class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView) {
-
-    }
+    class ViewHolder(ItemView: View) : RecyclerView.ViewHolder(ItemView)
 }
