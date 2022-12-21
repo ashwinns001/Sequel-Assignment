@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+<variable
+    name="response"
+    type="String" />
+    </data>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        app:cardBackgroundColor="#575656"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="15dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text_genere"
+            android:padding="5dp"
+            android:textSize="12sp"
+android:text="@{response}"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white" />
+
+    </androidx.cardview.widget.CardView>
+</layout>

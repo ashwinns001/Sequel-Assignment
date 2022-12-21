@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/WorkProjects/SequelAssignment/app/src/main/res/drawable/curve_edit.xml" value="0.1255" />
+        <entry key="..\:/WorkProjects/SequelAssignment/app/src/main/res/drawable/curve_genere.xml" value="0.1255" />
+        <entry key="..\:/WorkProjects/SequelAssignment/app/src/main/res/drawable/gradient.xml" value="0.1255" />
+        <entry key="..\:/WorkProjects/SequelAssignment/app/src/main/res/drawable/gradient_detail_bottom.xml" value="0.1" />
+        <entry key="..\:/WorkProjects/SequelAssignment/app/src/main/res/drawable/ic_search.xml" value="0.1255" />
+        <entry key="..\:/WorkProjects/SequelAssignment/app/src/main/res/drawable/ic_star.xml" value="0.1255" />
+        <entry key="..\:/WorkProjects/SequelAssignment/app/src/main/res/drawable/ic_time.xml" value="0.1255" />
+        <entry key="..\:/WorkProjects/SequelAssignment/app/src/main/res/layout/activity_main.xml" value="0.15" />
+        <entry key="..\:/WorkProjects/SequelAssignment/app/src/main/res/layout/activity_movie_detail.xml" value="0.24375" />
+        <entry key="..\:/WorkProjects/SequelAssignment/app/src/main/res/layout/item_genere.xml" value="0.1322463768115942" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
