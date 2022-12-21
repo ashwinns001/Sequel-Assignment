@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Sequel Assignment</string>
+    <string name="app_name">Movie Search</string>
     <string name="director">Director:</string>
     <string name="writer">Writer:</string>
     <string name="actors">Actors:</string>
